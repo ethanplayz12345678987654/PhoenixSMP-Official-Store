@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 64 64" role="img" aria-labelledby="title">
+  <title id="title">Diamond Placeholder</title>
+  <defs>
+    <linearGradient id="gd" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0%" stop-color="#bffdf6"/>
+      <stop offset="50%" stop-color="#7fe8d8"/>
+      <stop offset="100%" stop-color="#39cdb6"/>
+    </linearGradient>
+  </defs>
+  <rect x="4" y="12" width="56" height="40" rx="6" fill="url(#gd)" stroke="#0c6b5b" stroke-width="1"/>
+  <polygon points="32,8 52,28 32,56 12,28" fill="#9ff0e0" opacity="0.95"/>
+  <polygon points="32,12 46,28 32,52 18,28" fill="#e6fffb" opacity="0.6"/>
+</svg>
