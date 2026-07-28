@@ -1,0 +1,29 @@
+/* styles.css - simple responsive store layout */
+:root{
+  --bg:#0f1724; --card:#0b1220; --accent:#ffb86b; --muted:#94a3b8; --glass: rgba(255,255,255,0.03);
+  --radius:12px; --max-width:1100px;
+}
+*{box-sizing:border-box}
+html,body{height:100%}
+body{margin:0;font-family:Inter,system-ui,Segoe UI,Roboto,Helvetica,Arial,sans-serif;background:linear-gradient(180deg,#071027 0%,var(--bg)100%);color:#e6eef8}
+.container{max-width:var(--max-width);margin:0 auto;padding:24px}
+.site-header{background:transparent;padding:14px 0}
+.site-header .container{display:flex;align-items:center;justify-content:space-between}
+.site-header h1{margin:0;font-size:20px}
+.site-header nav a{color:var(--muted);margin-left:16px;text-decoration:none}
+.hero{padding:28px 0}
+.hero h2{margin:0 0 8px}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:16px;margin-top:16px}
+.card{background:linear-gradient(180deg,rgba(255,255,255,0.02),var(--glass));padding:16px;border-radius:var(--radius);box-shadow:0 6px 18px rgba(2,6,23,0.6)}
+.card h4{margin:0 0 6px}
+.price{color:var(--accent);font-weight:700;margin:6px 0}
+.card ul{margin:8px 0 12px;padding-left:18px;color:var(--muted)}
+.buy{background:var(--accent);border:none;padding:8px 12px;border-radius:8px;color:#06111b;font-weight:600;cursor:pointer}
+.site-footer{padding:18px 0;border-top:1px solid rgba(255,255,255,0.03);margin-top:28px}
+.site-footer .container{display:flex;justify-content:space-between;color:var(--muted)}
+.modal{position:fixed;inset:0;display:none;align-items:center;justify-content:center;background:rgba(2,6,23,0.6)}
+.modal[aria-hidden="false"]{display:flex}
+.modal-content{background:#071029;padding:20px;border-radius:12px;max-width:420px;width:90%;position:relative}
+.modal-close{position:absolute;right:10px;top:8px;background:transparent;border:none;color:var(--muted);font-size:20px;cursor:pointer}
+.btn{display:inline-block;margin-top:12px;padding:8px 12px;background:var(--accent);color:#06111b;text-decoration:none;border-radius:8px}
+@media (max-width:500px){.site-header .container{flex-direction:column;gap:8px;align-items:flex-start}}

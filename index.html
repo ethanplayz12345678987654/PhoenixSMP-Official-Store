@@ -1,0 +1,106 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>PhoenixSMP Store — Ranks</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="container">
+      <h1>PhoenixSMP Store</h1>
+      <nav>
+        <a href="#ranks">Ranks</a>
+        <a href="#faq">FAQ</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="hero">
+      <h2>Choose your rank and support the server</h2>
+      <p>Five ranks, each with unique perks. Click Buy to get started.</p>
+    </section>
+
+    <section id="ranks">
+      <h3>Available Ranks</h3>
+      <div class="grid">
+        <article class="card">
+          <h4>Bronze</h4>
+          <p class="price">$4.99</p>
+          <ul>
+            <li>Custom chat color</li>
+            <li>Small in-game tag</li>
+          </ul>
+          <button class="buy" data-rank="Bronze">Buy</button>
+        </article>
+
+        <article class="card">
+          <h4>Silver</h4>
+          <p class="price">$9.99</p>
+          <ul>
+            <li>All Bronze perks</li>
+            <li>Extra /kit</li>
+          </ul>
+          <button class="buy" data-rank="Silver">Buy</button>
+        </article>
+
+        <article class="card">
+          <h4>Gold</h4>
+          <p class="price">$14.99</p>
+          <ul>
+            <li>All Silver perks</li>
+            <li>Monthly crate key</li>
+          </ul>
+          <button class="buy" data-rank="Gold">Buy</button>
+        </article>
+
+        <article class="card">
+          <h4>Platinum</h4>
+          <p class="price">$24.99</p>
+          <ul>
+            <li>All Gold perks</li>
+            <li>Exclusive /hat</li>
+          </ul>
+          <button class="buy" data-rank="Platinum">Buy</button>
+        </article>
+
+        <article class="card">
+          <h4>Diamond</h4>
+          <p class="price">$49.99</p>
+          <ul>
+            <li>All Platinum perks</li>
+            <li>VIP support & special tag</li>
+          </ul>
+          <button class="buy" data-rank="Diamond">Buy</button>
+        </article>
+      </div>
+    </section>
+
+    <section id="faq">
+      <h3>FAQ</h3>
+      <p>After clicking Buy you'll be given a link or instructions to complete the purchase. You can customize these links in <code>scripts/main.js</code>.</p>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <span>Server IP: play.phoenixsmp.example</span>
+      <span>&copy; PhoenixSMP</span>
+    </div>
+  </footer>
+
+  <!-- Modal -->
+  <div id="modal" class="modal" aria-hidden="true">
+    <div class="modal-content">
+      <button id="modal-close" class="modal-close" aria-label="Close">×</button>
+      <h4 id="modal-title">Buy Rank</h4>
+      <p id="modal-body">Redirecting...</p>
+      <a id="modal-link" class="btn" href="#">Complete Purchase</a>
+    </div>
+  </div>
+
+  <script src="scripts/main.js"></script>
+</body>
+</html>
