@@ -7,25 +7,38 @@ document.addEventListener('DOMContentLoaded',()=>{
   const modalLink = document.getElementById('modal-link');
   const modalClose = document.getElementById('modal-close');
 
-  // Redirect BUY buttons to Venmo by default. Replace with your real checkout links if needed.
+  // Build checkout URL per-rank. Netherite Rank sends $11.49 to phone number 646-318-8264.
   function checkoutUrlFor(rank){
+    if(!rank) return 'https://venmo.com/';
+
+    // Specific payment link for Netherite Rank (pre-fills amount). Note: Venmo uses usernames/profiles;
+    // using a numeric profile (phone) may or may not prefill on desktop. Test on your device.
+    if(rank === 'Netherite Rank'){
+      return 'https://venmo.com/6463188264?txn=pay&amount=11.49';
+    }
+
+    // Default: generic Venmo homepage (or change to other rank-specific links)
     return 'https://venmo.com/';
   }
 
   buys.forEach(btn=>{
     btn.addEventListener('click',()=>{
-      const rank = btn.dataset.rank || 'Rank';
+      const rank = btn.dataset.rank || '';
       // Directly redirect the user to the checkout/payment page (Venmo)
       window.location.href = checkoutUrlFor(rank);
     })
   })
 
-  modalClose.addEventListener('click',()=>{
-    modal.setAttribute('aria-hidden','true');
-  })
+  if(modalClose){
+    modalClose.addEventListener('click',()=>{
+      modal.setAttribute('aria-hidden','true');
+    })
+  }
 
   // close when clicking outside content
-  modal.addEventListener('click',(e)=>{
-    if(e.target===modal) modal.setAttribute('aria-hidden','true');
-  })
+  if(modal){
+    modal.addEventListener('click',(e)=>{
+      if(e.target===modal) modal.setAttribute('aria-hidden','true');
+    })
+  }
 })
