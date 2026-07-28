@@ -1,9 +1,9 @@
 # Stasis Network Official Store
 
-This repository contains a simple static website for the Stasis Network store showcasing 5 Minecraft ranks.
+This repository contains a simple static website for the Stasis Network store showcasing 4 Minecraft ranks.
 
 Files added:
-- index.html — main page with 5 rank cards
+- index.html — main page with 4 rank cards
 - styles.css — styles for layout and look
 - scripts/main.js — small script to handle the Buy modal
 
