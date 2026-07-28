@@ -1,6 +1,6 @@
-# PhoenixSMP Official Store
+# Stasis Network Official Store
 
-This repository contains a simple static website for the PhoenixSMP store showcasing 5 Minecraft ranks.
+This repository contains a simple static website for the Stasis Network store showcasing 5 Minecraft ranks.
 
 Files added:
 - index.html — main page with 5 rank cards
