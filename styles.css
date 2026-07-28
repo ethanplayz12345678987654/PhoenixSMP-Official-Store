@@ -22,13 +22,15 @@ body{margin:0;font-family:Inter,system-ui,Segoe UI,Roboto,Helvetica,Arial,sans-s
 .card ul{margin:8px 0 12px;padding-left:18px;color:var(--muted)}
 .buy{background:var(--accent);border:none;padding:8px 12px;border-radius:8px;color:#06111b;font-weight:600;cursor:pointer}
 .site-footer{padding:18px 0;border-top:1px solid rgba(255,255,255,0.03);margin-top:28px}
-.site-footer .container{display:flex;justify-content:space-between;color:var(--muted)}
+.site-footer .container{display:flex;justify-content:space-between;color:var(--muted);align-items:center}
+.contact-info{color:#FF3B30;font-weight:700;font-size:14px}
+.footer-right{display:flex;gap:12px;align-items:center;color:var(--muted)}
 .modal{position:fixed;inset:0;display:none;align-items:center;justify-content:center;background:rgba(2,6,23,0.6)}
 .modal[aria-hidden="false"]{display:flex}
 .modal-content{background:#071029;padding:20px;border-radius:12px;max-width:420px;width:90%;position:relative}
 .modal-close{position:absolute;right:10px;top:8px;background:transparent;border:none;color:var(--muted);font-size:20px;cursor:pointer}
 .btn{display:inline-block;margin-top:12px;padding:8px 12px;background:var(--accent);color:#06111b;text-decoration:none;border-radius:8px}
-@media (max-width:500px){.site-header .container{flex-direction:column;gap:8px;align-items:flex-start}}
+@media (max-width:500px){.site-header .container{flex-direction:column;gap:8px;align-items:flex-start}.site-footer .container{flex-direction:column;gap:8px;align-items:flex-start}}
 
 /* rank image helper */
 .rank-img{display:block;margin:0 auto 8px;width:64px;height:auto}
