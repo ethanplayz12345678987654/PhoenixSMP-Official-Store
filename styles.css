@@ -52,3 +52,16 @@ body{
 
 /* rank image helper */
 .rank-img{display:block;margin:0 auto 8px;width:64px;height:auto}
+
+/* two-column layout for HOME + RANKS */
+.two-col{display:flex;gap:24px;align-items:flex-start}
+.home-section{flex:0 0 280px;background:linear-gradient(180deg,rgba(255,255,255,0.02),var(--glass));padding:16px;border-radius:12px;color:var(--muted)}
+.home-section h3{margin-top:0;color:var(--accent)}
+#ranks{flex:1}
+
+/* Responsive: stack columns on smaller screens */
+@media (max-width:900px){
+  .two-col{flex-direction:column}
+  .home-section{flex-basis:auto}
+  body{background-attachment:scroll}
+}
