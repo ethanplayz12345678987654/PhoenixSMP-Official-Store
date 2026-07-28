@@ -7,20 +7,16 @@ document.addEventListener('DOMContentLoaded',()=>{
   const modalLink = document.getElementById('modal-link');
   const modalClose = document.getElementById('modal-close');
 
-  // Replace this function to point to your real store/checkout links
+  // Redirect BUY buttons to Venmo by default. Replace with your real checkout links if needed.
   function checkoutUrlFor(rank){
-    // example: return `https://yourstore.example/checkout?rank=${encodeURIComponent(rank)}`;
-    return '#';
+    return 'https://venmo.com/';
   }
 
   buys.forEach(btn=>{
     btn.addEventListener('click',()=>{
       const rank = btn.dataset.rank || 'Rank';
-      modalTitle.textContent = `Buy ${rank}`;
-      modalBody.textContent = `You selected the ${rank} rank. Click Complete Purchase to continue to checkout.`;
-      modalLink.href = checkoutUrlFor(rank);
-      modalLink.textContent = 'Complete Purchase';
-      modal.setAttribute('aria-hidden', 'false');
+      // Directly redirect the user to the checkout/payment page (Venmo)
+      window.location.href = checkoutUrlFor(rank);
     })
   })
 
